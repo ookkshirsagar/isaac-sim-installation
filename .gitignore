@@ -1,0 +1,10 @@
+# Ignore the heavy app installation
+apps/
+isaac-sim/
+*.zip
+*.tar.gz
+
+# Ignore local logs and temp
+logs/
+tmp/
+.vscode/
