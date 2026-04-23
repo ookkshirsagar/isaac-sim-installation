@@ -1,17 +1,17 @@
-# 🚀 NVIDIA Isaac Sim Setup (Docker + Native)
+# NVIDIA Isaac Sim Setup (Docker + Native)
 
 This repository provides an automated way to prepare your Ubuntu system for **NVIDIA Isaac Sim**. It handles driver verification, Docker containerization support, and native dependency installation.
 
 ---
 
-## 📋 Prerequisites
+## Prerequisites
 - **OS:** Ubuntu 22.04 or 20.04
 - **GPU:** NVIDIA RTX (Recommended: RTX 30-series or higher)
 - **Display:** Must be using an **X11** session (Wayland is not supported by Isaac GUI)
 
 ---
 
-## 🧩 1. Quick Start
+## 1. Quick Start
 Clone this repository and run the setup script:
 
 \`\`\`bash
@@ -24,7 +24,7 @@ chmod +x setup_isaac.sh
 
 ---
 
-## ⚙️ 2. What the script does
+## 2. What the script does
 1. **Verifies GPU:** Checks for NVIDIA drivers and CUDA compatibility.
 2. **Installs Docker:** Sets up the Docker engine.
 3. **NVIDIA Container Toolkit:** Configures the runtime so Docker can access your GPU.
@@ -33,7 +33,7 @@ chmod +x setup_isaac.sh
 
 ---
 
-## 🖥️ 3. Finalizing Native Installation
+## 3. Finalizing Native Installation
 The script prepares the system, but you must manually download the Isaac Sim package from the **NVIDIA Developer Portal**:
 
 1. Download the Isaac Sim \`.zip\` or \`.tar.gz\`.
@@ -50,12 +50,12 @@ The script prepares the system, but you must manually download the Isaac Sim pac
 
 ---
 
-## ⚡ 4. Useful Commands
+## 4. Useful Commands
 After running the script, you can use the **alias** (after running \`source ~/.bashrc\`):
 - \`isaac\`: Quickly jump to the directory and launch the simulator.
 
 ---
 
-## ✅ Verification
+## Verification
 - Run \`nvidia-smi\` to ensure the GPU is active.
 - Run \`docker run --rm --gpus all nvidia/cuda:12.0.0-base-ubuntu22.04 nvidia-smi\` to verify Docker GPU access.
